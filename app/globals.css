@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  --color-primary: #34d163; /* Approximate green from screenshot */
+  --color-primary-dark: #2ab552;
+  --color-secondary: #f3fcf6; /* Light green bg */
+  --font-display: var(--font-inter);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-display);
+}
