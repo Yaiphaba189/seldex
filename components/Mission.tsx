@@ -3,42 +3,57 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+            delayChildren: 0.1
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut" as const
+        }
+    }
+};
+
 export function Mission() {
     return (
         <section className="py-24 relative overflow-hidden">
             <div className="container px-4 mx-auto text-center relative z-10">
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
                     className="max-w-4xl mx-auto"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
                 >
                     <div className="relative inline-block">
-                        {/* Decorative arrow/scribble */}
-                        <svg className="absolute -top-12 -right-12 w-24 h-24 text-primary opacity-80" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M20,80 Q50,10 80,50 T90,90" strokeDasharray="5,5" />
-                            <path d="M85,85 L90,90 L80,92" />
-                        </svg>
+                        <h2 className="text-5xl md:text-6xl font-medium text-gray-900 leading-tight relative">
+                            <motion.span className='relative block' variants={itemVariants}>
+                                Our team of is driving
+                                <Image src="/Arrow.svg" alt="arrow" width={90} height={80} loading="lazy" className="absolute -top-18 -right-12 hidden md:block" />
+                            </motion.span>
 
-                        <h2 className="text-4xl md:text-5xl font-medium text-gray-900 leading-tight">
-                            Our team of is driving <br />
-                            <span className="relative inline-block">
-                                the shift
-                                <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary/30" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                    <path d="M0,5 Q50,10 100,5" stroke="currentColor" strokeWidth="2" fill="none" />
-                                </svg>
-                            </span> to sustainable <br />
-                            financial solutions
+                            <motion.span className="flex flex-wrap items-center justify-center gap-4" variants={itemVariants}>
+                                <Image src="/Wave.svg" alt="wave" width={60} height={60} loading="lazy" className="inline-block" />
+                                the shift to sustainable
+                            </motion.span>
+                            <motion.span className="flex flex-wrap items-center justify-center gap-2" variants={itemVariants}>
+                                financial
+                                <Image src="/Image.svg" alt="decorative" width={100} height={60} loading="lazy" className="inline-block rounded-md object-cover mt-2" />
+                                solutions
+                            </motion.span>
                         </h2>
-                    </div>
-
-                    <div className="mt-12 relative w-full h-64 md:h-80 bg-white/40 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl border border-white/50">
-                        {/* Placeholder for team image */}
-                        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-400">
-                            <span className="text-lg">[Team Image Placeholder]</span>
-                        </div>
-                        {/* If we had an image: <Image src="/team.jpg" alt="Team" fill className="object-cover" /> */}
                     </div>
                 </motion.div>
             </div>

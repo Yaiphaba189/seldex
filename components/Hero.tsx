@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
 export function Hero() {
     return (
         <section className="relative flex flex-col items-center justify-center min-h-[90vh] pt-32 pb-16 overflow-hidden">
@@ -12,8 +11,9 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
+                    className="will-change-transform"
                 >
-                    <h1 className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight text-gray-900 mb-6">
+                    <h1 className="text-5xl md:text-6xl font-medium leading-tight tracking-tight text-gray-900 mb-6">
                         Driving &quot;First Time Right&quot; (FTR) <br />
                         for <span className="text-primary">Loan Agents & Direct Selling Agents(DSA)</span>
                     </h1>
@@ -25,16 +25,27 @@ export function Hero() {
 
                     {/* Input Action */}
                     <div className="relative max-w-lg mx-auto mb-16 group">
-                        <div className="relative flex items-center p-1.5 bg-gray-50/80 backdrop-blur-sm border border-gray-100 rounded-full shadow-sm hover:shadow-md transition-all duration-300  hover:scale-105  whitespace-nowrap">
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                const email = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value;
+                                if (email) {
+                                    window.location.href = `mailto:hello@seldex.com?subject=Demo Request&body=Hi, inside %0D%0A%0D%0AI would like to request a demo. My work email is: ${email}`;
+                                }
+                            }}
+                            className="relative flex items-center p-1.5 bg-white border border-gray-100 rounded-full shadow-sm hover:shadow-md transition-all duration-300  hover:scale-105  whitespace-nowrap"
+                        >
                             <input
+                                name="email"
                                 type="email"
+                                required
                                 placeholder="Enter Your Work mail"
                                 className="flex-1 w-full px-6 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-400 font-medium"
                             />
-                            <button className="px-6 py-3 bg-primary hover:bg-[#2ab552] text-white text-sm font-semibold rounded-full shadow-lg shadow-primary/30 transition-all hover:scale-105 active:scale-95 whitespace-nowrap">
+                            <button type="submit" className="px-6 py-3 bg-primary hover:bg-[#2ab552] text-white text-sm font-semibold rounded-full shadow-lg shadow-primary/30 transition-all">
                                 Request a Demo
                             </button>
-                        </div>
+                        </form>
                     </div>
 
                     {/* Stats */}
