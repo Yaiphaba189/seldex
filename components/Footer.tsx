@@ -18,7 +18,7 @@ export function Footer() {
                     </div>
 
                     {/* Right Side: Links Group */}
-                    <div className="flex gap-16 md:gap-24">
+                    <div className="flex gap-16xx md:gap-24">
                         <div>
                             <h4 className="font-semibold text-gray-900 mb-4">Product</h4>
                             <ul className="space-y-2 text-sm text-gray-500">

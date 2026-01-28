@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 export function Hero() {
     return (
-        <section className="relative flex flex-col items-center justify-center min-h-[90vh] pt-32 pb-16 overflow-hidden">
+        <section className="relative flex flex-col items-center justify-center min-h-[90vh] pt-20 md:pt-32 pb-16 overflow-hidden">
             {/* Background Gradients removed for global background */}
 
             <div className="container px-4 mx-auto text-center max-w-8xl z-10">
@@ -13,18 +13,18 @@ export function Hero() {
                     transition={{ duration: 0.6 }}
                     className="will-change-transform"
                 >
-                    <h1 className="text-5xl md:text-6xl font-medium leading-tight tracking-tight text-gray-900 mb-6">
-                        Driving &quot;First Time Right&quot; (FTR) <br />
-                        for <span className="text-primary">Loan Agents & Direct Selling Agents(DSA)</span>
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-medium leading-tight tracking-tight text-gray-900 mb-6 px-4">
+                        Driving &quot;First Time Right&quot; (FTR) <br className="hidden md:block" />
+                        for <span className="text-primary block md:inline">Loan Agents & Direct Selling Agents(DSA)</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed">
+                    <p className="text-lg md:text-xl text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed px-4">
                         Leveraging Intelligent Document Processing (IDP) and Data Governance <br className="hidden md:block" />
                         for Audit-Ready Loan processing
                     </p>
 
                     {/* Input Action */}
-                    <div className="relative max-w-lg mx-auto mb-16 group">
+                    <div className="relative max-w-[90%] md:max-w-lg mx-auto mb-12 md:mb-16 group">
                         <form
                             onSubmit={(e) => {
                                 e.preventDefault();
@@ -33,23 +33,23 @@ export function Hero() {
                                     window.location.href = `mailto:hello@seldex.com?subject=Demo Request&body=Hi, inside %0D%0A%0D%0AI would like to request a demo. My work email is: ${email}`;
                                 }
                             }}
-                            className="relative flex items-center p-1.5 bg-white border border-gray-100 rounded-full shadow-sm hover:shadow-md transition-all duration-300  hover:scale-105  whitespace-nowrap"
+                            className="relative flex flex-col sm:flex-row items-center p-1.5 bg-white border border-gray-100 rounded-2xl sm:rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105"
                         >
                             <input
                                 name="email"
                                 type="email"
                                 required
                                 placeholder="Enter Your Work mail"
-                                className="flex-1 w-full px-6 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-400 font-medium"
+                                className="w-full px-4 sm:px-6 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-400 font-medium text-center sm:text-left mb-2 sm:mb-0"
                             />
-                            <button type="submit" className="px-6 py-3 bg-primary hover:bg-[#2ab552] text-white text-sm font-semibold rounded-full shadow-lg shadow-primary/30 transition-all">
+                            <button type="submit" className="w-full sm:w-auto px-6 py-3 bg-primary hover:bg-[#2ab552] text-white text-sm font-semibold rounded-xl sm:rounded-full shadow-lg shadow-primary/30 transition-all">
                                 Request a Demo
                             </button>
                         </form>
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-16 max-w-3xl mx-auto mt-16">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-16 max-w-3xl mx-auto mt-12 md:mt-16">
                         <CircularStat
                             value={60}
                             label="Faster TAT"

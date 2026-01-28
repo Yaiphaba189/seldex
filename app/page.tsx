@@ -9,7 +9,7 @@ import { Background } from '@/components/Background';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-transparent font-sans selection:bg-primary/20 relative">
+    <main className="min-h-screen bg-transparent font-sans selection:bg-primary/20 relative overflow-x-hidden">
       <Background />
       <Header />
       <Hero />

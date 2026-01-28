@@ -18,7 +18,7 @@ const features: FeatureConfig[] = [
     {
         title: "Intelligent Document Processing",
         description: "AI-powered extraction and validation that detects, verifies and structures documents automatically reducing human error.",
-        image: "/IDP.svg",
+        image: "/IDP.webp",
         layout: "text-top",
         width: 280,
         height: 200,
@@ -28,7 +28,7 @@ const features: FeatureConfig[] = [
     {
         title: "Built for Efficiency",
         description: "Every feature is designed to remove friction and speed your loan pipeline from intake to disbursal.",
-        image: "/Build for efficiency.svg",
+        image: "/Build for efficiency.webp",
         layout: "image-top",
         width: 280,
         height: 200,
@@ -38,7 +38,7 @@ const features: FeatureConfig[] = [
     {
         title: "Compliance Assured",
         description: "Built-in regulatory rules and timestamped audit trails ensure every file meets audit standards",
-        image: "/Compliance Assured.svg",
+        image: "/Compliance Assured.webp",
         layout: "image-top",
         width: 280,
         height: 200,
@@ -48,7 +48,7 @@ const features: FeatureConfig[] = [
     {
         title: "Automated Financial Analysis",
         description: "AI-powered extraction and validation of loan documents with 100% accuracy",
-        image: "/Automated Financial Analysis.svg",
+        image: "/Automated Financial Analysis.webp",
         layout: "image-top",
         width: 280,
         height: 200,
@@ -58,7 +58,7 @@ const features: FeatureConfig[] = [
     {
         title: "60% Faster Processing",
         description: "Automated checks and workflows cut manual cycles get from submission to underwriting far quicker.",
-        image: "/60.svg",
+        image: "/60.webp",
         layout: "image-top",
         width: 280,
         height: 200,
@@ -68,7 +68,7 @@ const features: FeatureConfig[] = [
     {
         title: "Structured Data Output",
         description: "Clean, normalized data delivered in ready-to-integrate formats for your core systems and downstream analytics.",
-        image: "/Structured Data Output.svg",
+        image: "/Structured Data Output.webp",
         layout: "image-top",
         width: 280,
         height: 200,
@@ -104,13 +104,13 @@ export function Features() {
 
     return (
         <section className="py-16">
-            <div className="container px-10 mx-auto max-w-7xl">
+            <div className="container px-4 md:px-10 mx-auto max-w-7xl">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-6xl font-medium text-gray-900 inline-block border-b-4 border-primary/20 pb-2"
+                        className="text-4xl md:text-6xl font-medium text-gray-900 inline-block border-b-4 border-primary/20 pb-2"
                     >
                         Key Features
                     </motion.h2>
@@ -153,7 +153,7 @@ function FeatureCard({ feature, index, variants, shouldReduceMotion }: { feature
             variants={variants}
             whileHover={shouldReduceMotion ? {} : { y: -5 }}
             className={`
-                bg-white rounded-[2rem] p-8 h-full flex flex-col
+                bg-white rounded-[2rem] p-6 md:p-8 h-full flex flex-col
                 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)]
                 border border-gray-100/50 transition-shadow duration-300
                 text-left ${gapClass} will-change-transform

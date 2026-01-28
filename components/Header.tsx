@@ -13,7 +13,7 @@ export function Header() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             className={cn(
-                "flex items-center justify-between px-20 py-6 md:px-26",
+                "flex flex-wrap items-center justify-between px-6 py-6 md:px-26",
 
             )}
         >
@@ -22,16 +22,16 @@ export function Header() {
                 <Image src={logo} alt="Logo" width={100} height={100} />
             </div>
 
-            <nav className="flex items-center gap-4">
+            <nav className="flex items-center gap-2 md:gap-4">
                 <Link
                     href="#"
-                    className="px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+                    className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium text-gray-900 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
                 >
                     About Us
                 </Link>
                 <Link
                     href="#"
-                    className="px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+                    className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium text-gray-900 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
                 >
                     Contact Us
                 </Link>

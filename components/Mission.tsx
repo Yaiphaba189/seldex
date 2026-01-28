@@ -38,7 +38,7 @@ export function Mission() {
                     viewport={{ once: true, margin: "-50px" }}
                 >
                     <div className="relative inline-block">
-                        <h2 className="text-5xl md:text-6xl font-medium text-gray-900 leading-tight relative">
+                        <h2 className="text-3xl sm:text-4xl md:text-6xl font-medium text-gray-900 leading-tight relative">
                             <motion.span className='relative block' variants={itemVariants}>
                                 Our team of is driving
                                 <Image src="/Arrow.svg" alt="arrow" width={90} height={80} loading="lazy" className="absolute -top-18 -right-12 hidden md:block" />
@@ -50,7 +50,7 @@ export function Mission() {
                             </motion.span>
                             <motion.span className="flex flex-wrap items-center justify-center gap-2" variants={itemVariants}>
                                 financial
-                                <Image src="/Image.svg" alt="decorative" width={100} height={60} loading="lazy" className="inline-block rounded-md object-cover mt-2" />
+                                <Image src="/Image.webp" alt="decorative" width={100} height={60} loading="lazy" className="inline-block rounded-md object-cover mt-2" />
                                 solutions
                             </motion.span>
                         </h2>
