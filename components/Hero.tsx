@@ -30,19 +30,19 @@ export function Hero() {
                                 e.preventDefault();
                                 const email = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value;
                                 if (email) {
-                                    window.location.href = `mailto:hello@seldex.com?subject=Demo Request&body=Hi, inside %0D%0A%0D%0AI would like to request a demo. My work email is: ${email}`;
+                                    window.location.href = `mailto:[EMAIL_ADDRESS]?subject=Demo Request&body=Hi, inside %0D%0A%0D%0AI would like to request a demo. My work email is: ${email}`;
                                 }
                             }}
-                            className="relative flex flex-col sm:flex-row items-center p-1.5 bg-white border border-gray-100 rounded-2xl sm:rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105"
+                            className="relative flex flex-row items-center p-1.5 bg-white border border-gray-100 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105"
                         >
                             <input
                                 name="email"
                                 type="email"
                                 required
                                 placeholder="Enter Your Work mail"
-                                className="w-full px-4 sm:px-6 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-400 font-medium text-center sm:text-left mb-2 sm:mb-0"
+                                className="w-full px-4 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-400 font-medium text-left"
                             />
-                            <button type="submit" className="w-full sm:w-auto px-6 py-3 bg-primary hover:bg-[#2ab552] text-white text-sm font-semibold rounded-xl sm:rounded-full shadow-lg shadow-primary/30 transition-all">
+                            <button type="submit" className="w-auto px-6 py-3 bg-primary hover:bg-[#2ab552] text-white text-sm font-semibold rounded-full shadow-lg shadow-primary/30 transition-all whitespace-nowrap">
                                 Request a Demo
                             </button>
                         </form>
