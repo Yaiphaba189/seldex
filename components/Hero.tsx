@@ -6,7 +6,7 @@ export function Hero() {
         <section className="relative flex flex-col items-center justify-center min-h-[90vh] pt-20 md:pt-32 pb-16 overflow-hidden">
             {/* Background Gradients removed for global background */}
 
-            <div className="container px-4 mx-auto text-center max-w-8xl z-10">
+            <div className="container px-6 md:px-16 mx-auto text-center max-w-8xl z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

@@ -104,7 +104,7 @@ export function Features() {
 
     return (
         <section className="py-16">
-            <div className="container px-4 md:px-10 mx-auto max-w-7xl">
+            <div className="container px-6 md:px-16 mx-auto max-w-7xl">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}

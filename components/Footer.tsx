@@ -4,12 +4,12 @@ import Image from 'next/image';
 export function Footer() {
     return (
         <footer className="py-12 ">
-            <div className="container px-10 mx-auto">
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12 mb-12">
+            <div className="container px-6 md:px-16 mx-auto">
+                <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-12 mb-12">
                     {/* Left Side: Logo & Description */}
-                    <div className="max-w-sm">
-                        <div className="flex items-center gap-2">
-                            <Image src={logo} alt="Seldex Logo" width={100} height={100} />
+                    <div className="max-w-sm text-center md:text-left">
+                        <div className="flex items-center justify-center md:justify-start gap-2">
+                            <Image src={logo} alt="Seldex Logo" width={120} height={120} />
                         </div>
                         <p className="mt-4 text-sm text-gray-500">
                             AI-powered document processing <br />
@@ -18,7 +18,7 @@ export function Footer() {
                     </div>
 
                     {/* Right Side: Links Group */}
-                    <div className="flex flex-wrap gap-8 md:gap-24">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-8 md:gap-24 text-center md:text-left">
                         <div>
                             <h4 className="font-semibold text-gray-900 mb-4">Product</h4>
                             <ul className="space-y-2 text-sm text-gray-500">

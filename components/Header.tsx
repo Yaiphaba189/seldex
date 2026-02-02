@@ -17,11 +17,11 @@ export function Header() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
             className={cn(
-                "flex flex-wrap items-center justify-between px-6 py-6 md:px-26 relative z-50",
+                "flex flex-wrap items-center justify-between container px-6 py-6 md:px-16 mx-auto relative z-50",
             )}
         >
             <div className="flex items-center gap-2">
-                <Image src={logo} alt="Logo" width={120} height={120} />
+                <Image src={logo} alt="Logo" width={130} height={130} />
             </div>
 
             {/* Desktop Navigation */}

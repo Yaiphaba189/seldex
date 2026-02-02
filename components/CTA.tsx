@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function CTA() {
     return (
-        <section className="py-16 px-4">
+        <section className="py-12 px-6 md:px-8 mx-auto max-w-7xl">
             <div className="container mx-auto max-w-10xl ">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}

@@ -15,11 +15,11 @@ const governancePoints = [
 
 export function Governance() {
     return (
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-24 px-6 md:px-16 mx-auto max-w-7xl">
             {/* Background blobs removed for global background */}
             <div className="absolute top-1/2  w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 -ml-20" />
 
-            <div className="container px-4 md:px-10 mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div className="container px-6 md:px-16 mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}

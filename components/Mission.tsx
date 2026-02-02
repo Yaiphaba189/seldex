@@ -28,8 +28,8 @@ const itemVariants = {
 
 export function Mission() {
     return (
-        <section className="py-24 relative overflow-hidden">
-            <div className="container px-4 mx-auto text-center relative z-10">
+        <section className="hidden md:block py-24 relative overflow-hidden">
+            <div className="container px-6 md:px-16 mx-auto text-center relative z-10">
                 <motion.div
                     className="max-w-4xl mx-auto"
                     variants={containerVariants}
