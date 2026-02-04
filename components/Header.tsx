@@ -20,20 +20,20 @@ export function Header() {
                 "flex flex-wrap items-center justify-between container px-6 py-6 md:px-16 mx-auto relative z-50",
             )}
         >
-            <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
                 <Image src={logo} alt="Logo" width={130} height={130} />
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-4">
                 <Link
-                    href="#"
+                    href="/about"
                     className="px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
                 >
                     About Us
                 </Link>
                 <Link
-                    href="#"
+                    href="/contact"
                     className="px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
                 >
                     Contact Us
@@ -58,14 +58,14 @@ export function Header() {
                     className="absolute top-full left-0 right-0 bg-white shadow-lg p-4 flex flex-col gap-4 md:hidden border-t border-gray-100"
                 >
                     <Link
-                        href="#"
+                        href="/about"
                         className="px-4 py-3 text-sm font-medium text-gray-900 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors text-center"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         About Us
                     </Link>
                     <Link
-                        href="#"
+                        href="/contact"
                         className="px-4 py-3 text-sm font-medium text-gray-900 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors text-center"
                         onClick={() => setIsMenuOpen(false)}
                     >

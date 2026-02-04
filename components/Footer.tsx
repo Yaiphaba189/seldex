@@ -8,9 +8,9 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-12 mb-12">
                     {/* Left Side: Logo & Description */}
                     <div className="max-w-sm text-center md:text-left">
-                        <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Link href="/" className="flex items-center justify-center md:justify-start gap-2">
                             <Image src={logo} alt="Seldex Logo" width={120} height={120} />
-                        </div>
+                        </Link>
                         <p className="mt-4 text-sm text-gray-500">
                             AI-powered document processing <br />
                             for modern lending.
@@ -30,18 +30,12 @@ export function Footer() {
                         <div>
                             <h4 className="font-semibold text-gray-900 mb-4">Company</h4>
                             <ul className="space-y-2 text-sm text-gray-500">
-                                <li><Link href="#" className="hover:text-primary transition-colors">About us</Link></li>
-                                <li><Link href="#" className="hover:text-primary transition-colors">Contact us</Link></li>
+                                <li><Link href="/about" className="hover:text-primary transition-colors">About us</Link></li>
+                                <li><Link href="/contact" className="hover:text-primary transition-colors">Contact us</Link></li>
                             </ul>
                         </div>
 
-                        <div>
-                            <h4 className="font-semibold text-gray-900 mb-4">Legal</h4>
-                            <ul className="space-y-2 text-sm text-gray-500">
-                                <li><Link href="#" className="hover:text-primary transition-colors">Privacy</Link></li>
-                                <li><Link href="#" className="hover:text-primary transition-colors">Terms</Link></li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
 
